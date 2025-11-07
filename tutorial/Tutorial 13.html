@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form - Text Input</title>
+<link rel=icon href=pig.jpg type=image/jpg>
+
+<style>
+  body {
+    font-family: Verdana, sans-serif;
+    background-color: #d7f0f7; 
+    margin: 0;
+    padding: 0;
+  }
+
+  form {
+    background-color: #b3e5fc; 
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    text-align: center;
+    background-color: #b3e5fc;
+    color: #333;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 8px;
+    border: 1px solid #b0bec5; 
+  }
+
+  td:first-child {
+    background-color: #cfd8dc; 
+    text-align: right;
+    font-weight: bold;
+    width: 40%;
+    color: #333;
+    padding-right: 10px;
+  }
+
+  td:last-child {
+    background-color: #e1f5fe; 
+    padding-left: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #90a4ae;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  input[type="reset"] {
+    background-color: #757575;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0277bd;
+  }
+
+  input[type="reset"]:hover {
+    background-color: #616161;
+  }
+</style>
+
+<script>
+function validateForm(){
+ //to validate text-do not allow empty
+ let x=document.MyFirstForm.fname.value;
+ if(x==""){
+  alert("Please provide your First Name!");
+  return false;
+ }
+
+ //to validate text-only allow alphabet characters
+ let y=document.MyFirstForm.lname.value;
+ var letters=/^[A-Za-z]/;
+ if(!y.match(letters))
+ {
+  alert("Please input alphabet characters for Last Name.");
+  return false;
+ }
+ 
+ //to validate radio button-must select
+ if((MyFirstForm.gender[0].checked==false)&&(MyFirstForm.gender[1].checked==false))
+ {
+  alert("Please choose Gender: Male of Female");
+  return false;
+ }
+}
+</script
+
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+</head>
+<body topmargin=50>
+<center>
+<form name=MyFirstForm onsubmit="return validateForm()">
+<p style="background-color:powderblue;
+color:#696969;font-family:verdana;
+font-size:160%;
+text-align:center;
+width:100%;height:100%;">
+
+
+<b>Personal details:</b>
+
+<table>
+<tr>
+<td>First Name:</td> 
+<td><input type=text name=fname size=50 maxlength=10></td>
+</tr>
+
+<tr> 
+<td>Last Name:</td>
+<td>
+<input type=text name=lname placeholder='Last name' autofocus>
+</td>
+</tr>
+
+<tr>
+<td>Gender:</td>
+<td colspan=2><input type=radio name=gender value=Male>Male <input type=radio name=gender value=Female>Female</td>
+</tr>
+
+<tr>
+<td>Choose your favorite subject:</td>
+<td>
+<input type=checkbox name=fav_sub value=DCS4103 checked>DCS4103
+<input type=checkbox name=fav_sub value=DCS3003 disabled>DCS3003
+<input type=checkbox name=fav_sub value=MST1003>MST1003 
+<input type=checkbox name=fav_sub value=MST2003>MST2003</td>
+</tr>
+
+<tr>
+<td>Address:</td>
+<td><textarea rows=4 cols=30 name=address></textarea></td>
+</tr>
+
+<tr>
+<td>Date of birth:</td>
+<td><input type=date name=dob min=2000-01-01 max=2005-12-31></td>
+</tr>
+
+<tr>
+<td>Login password:</td>
+<td><input type=password name=loginpass minlength=4 maxlength=4>
+</td>
+</tr>
+
+<tr>
+<td>Course:</td>
+<td><select><option value="0">-List of Course-</option>
+<optgroup label="Diploma in Computer Science">
+<option value="DCS_S1">Semester 1</option>
+<option value="DCS_S2">Semester 2</option>
+<option value="DCS_S3">Semester 3</option>
+<option value="DCS_S4">Semester 4</option>
+<option value="DCS_S5">Semester 5</option>
+<option value="DCS_S6">Semester 6</option>
+</optgroup> 
+<option value="DIB">Diploma in Business</option> 
+<option value="DAS">Diploma inAirline Services</option></td>
+</select>
+</tr>
+</table>
+
+<input type=submit value=Submit>
+<input type=reset value=Reset>
+</form>
+</center></body></html>
