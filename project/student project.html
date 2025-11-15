@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+<link rel=icon href=pig.jpg type=image/jpg>
+<title>GG Hero University</title>
+<link rel="stylesheet"href="style.css">
+</head>
+<script>
+function filterProjects(category) {
+  const projects = document.querySelectorAll('.project');
+
+  projects.forEach(project => {
+    if (category === 'all') {
+      project.style.display = 'block';
+    } else {
+      if (project.classList.contains(category)) {
+        project.style.display = 'block';
+      } else {
+        project.style.display = 'none';
+      }
+    }
+  });
+}
+</script>
+<body>
+<header>
+<centre>
+<h1>School of Computing</h1>
+</centre>
+</header>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="programmes.html">Programmes</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="student project.html">Student Project</a></li>
+<li><a href="admission & application.html">Admission & Application</a></li>
+</ul>
+</nav>
+
+ <section class="page-section">
+    <h2>Student Project</h2>
+    <img name="content-frame" src="images/image07.jpg" class="content-frame"></img>
+    <section class="filter-buttons">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+    <button onclick="filterProjects('app')">App</button>
+    <button onclick="filterProjects('ai')">AI</button>
+  </section>
+
+<section id="project-list">
+    <div class="project web">
+      <img src="images/web.jpg" alt="Web Project 1">
+      <h3>Portfolio Website</h3>
+      <p>A personal website created using HTML, CSS, and JavaScript.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project app">
+      <img src="images/app.jpg" alt="App Project 1">
+      <h3>Mobile Attendance App</h3>
+      <p>An Android app to manage student attendance easily.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project ai">
+      <img src="images/ai.jpg" alt="AI Project 1">
+      <h3>Chatbot Assistant</h3>
+      <p>A simple chatbot built with Python and NLP.</p>
+      <a href="#">View Project</a>
+    </div>
+  </section>
+
+</body>
+
+<footer>
+<p>2010 GG Hero University - School of Computing. All Rights Reserved.</p>
+</footer>
+
+</html>
