@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global Style */
 body {
   font-family: "Poppins", Arial, sans-serif;
   line-height: 1.7;
@@ -13,7 +11,6 @@ body {
   color: #554e58;
 }
 
-/* Header */
 header {
   background: linear-gradient(135deg, #ffb7d5, #ffc8e9);
   color: white;
@@ -31,7 +28,6 @@ header {
   font-weight: 600;
 }
 
-/* Navigation */
 nav {
   background: #ffe6f5;
   box-shadow: 0 4px 12px rgba(255, 182, 212, 0.3);
@@ -63,7 +59,6 @@ nav ul li a:hover {
   transform: translateY(-3px);
 }
 
-/* Main Frame */
 main {
   display: flex;
   justify-content: center;
@@ -81,7 +76,6 @@ main {
   padding: 25px;
 }
 
-/*  Page Sections */
 .page-section {
   background: white;
   padding: 35px;
@@ -98,8 +92,6 @@ main {
   font-weight: 600;
 }
 
-
-/* Programmes List */
 .programme-list {
   list-style: none;
   padding-left: 0;
@@ -119,14 +111,12 @@ main {
   background: #ffe1f3;
 }
 
-/* Contact Info */
 .contact-info a {
   color: #ff6bbf;
   text-decoration: none;
   font-weight: 500;
 }
 
-/*  Footer */
 footer {
   background-color: #ffb7d5;
   color: white;
@@ -138,7 +128,6 @@ footer {
   box-shadow: 0 -4px 12px rgba(255, 160, 200, 0.3);
 }
 
-/*  Mobile */
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.6em;
@@ -160,7 +149,6 @@ footer {
   }
 }
 
-/*  Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
   nav ul li a {
     padding: 10px 20px;
@@ -204,7 +192,6 @@ footer {
   transform: translateY(-3px);
 }
 
-/* Projects */
 #project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -242,7 +229,6 @@ footer {
   transform: translateY(-6px) rotate(1deg);
 }
 
-/*  Form Section */
 .form-section {
   max-width: 700px;
   margin: 30px auto;
@@ -331,7 +317,6 @@ textarea#comment{
   box-shadow: 0 0 8px rgba(255, 150, 210, 0.3);
 }
 
-/* Buttons */
 .form-buttons input {
   padding: 10px 20px;
   margin: 5px;
@@ -589,3 +574,4 @@ body {
 
 .slider button.prev { left: 15px; }
 .slider button.next { right: 15px; }
+
