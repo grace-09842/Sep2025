@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>grace GG Bond</title>
+<link rel=icon href="../DCS3003/pig.jpg" type=image/jpg>
+<script>
+function myFunction() {
+    alert ("data row1-cow1");     
+}
+function myFunction2(){
+    alert ("data row1-col2");
+}
+function myFunction3(){
+    alert ("data row1-col3");
+}
+function myFunction4(x){
+    x.style.backgroundColor="pink";
+}
+
+</script>
+
+</head>
+<body topmargin=20 leftmargin=50>
+
+<table border=3 width=800 height=500 align=center>
+<caption>My Fisrt Web Table<br><br></caption>
+<tr> 
+<th>header one</th>
+<th>header two</th> 
+<th>header three</th>
+<th>header four</th>
+</tr>
+
+<tr> 
+<td onclick=myFunction()>data row1-col1</td> 
+<td onmouseover="myFunction2()">data row1-col2</td> 
+<td ondblclick="myFunction3()">data row1-col3</td> 
+<td onclick="myFunction4(this)">data row1-col4</td> 
+
+</tr>
+
+<tr> 
+<td>data row2-col1</td> 
+<td>data row2-col2</td> 
+<td>data row2-col3</td> 
+<td>data row2-col4</td> 
+</tr>
+</table> 
+
+</body></html>
+
+
